@@ -1,0 +1,27 @@
+{% extends 'basefile.html' %}
+
+{% block main_content %}
+
+<table class="table">
+    <tr class="table-dark">
+        <th class="table-dark">ID</th>
+        <th class="table-dark">name</th>
+        <th class="table-dark">age</th>
+        <th class="table-dark">city</th>
+        <th class="table-dark">salary</th>
+        <th class="table-dark">business</th>
+    </tr>
+
+
+    <tr class="table-dark">
+        <td class="table-dark">{{ object.id }}</td>
+        <td class="table-dark">{{ object.name }}</td>
+        <td class="table-dark">{{ object.age }}</td>
+        <td class="table-dark">{{ object.city }}</td>
+        <td class="table-dark">{{ object.salary }}</td>
+        <td class="table-dark">{{ object.business }}</td>
+    </tr>
+
+
+</table>
+{% endblock %}

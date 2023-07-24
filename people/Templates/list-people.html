@@ -1,0 +1,31 @@
+{% extends 'basefile.html' %}
+
+{% block main_content %}
+
+<table class="table">
+    <tr class="table-dark">
+        <th class="table-dark">ID</th>
+        <th class="table-dark">name</th>
+        <th class="table-dark">age</th>
+        <th class="table-dark">city</th>
+        <th>details</th>
+        <th>update</th>
+        <th>delete</th>
+    </tr>
+
+    {%for i in people_list %}
+
+    <tr class="table-dark">
+        <td class="table-dark">{{ i.id }}</td>
+        <td class="table-dark">{{ i.name }}</td>
+        <td class="table-dark">{{ i.age }}</td>
+        <td class="table-dark">{{ i.city }}</td>
+        <td><a href="{% url 'people-details-link' pk=i.id %}">Подробнее</a></td>
+        <td><a href="{% url 'people-update-link' pk=i.id %}">Обновить</a></td>
+        <td><a href="{% url 'people-delete-link' pk=i.id %}">Удалить</a></td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+{% endblock %}
